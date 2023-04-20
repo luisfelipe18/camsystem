@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Webcam Stream</title>
+  </head>
+  <body>
+    <h1>Webcam Stream</h1>
+    {% for camera_id in range(num_cameras) %}
+    <h2>Camera {{ camera_id }}</h2>
+    <img src="{{ url_for('video_feed', camera_id=camera_id) }}" width="640" height="480">
+    {% endfor %}
+  </body>
+</html>
